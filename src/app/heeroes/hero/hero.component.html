@@ -1,0 +1,16 @@
+<h1>{{name}}</h1>
+<dl>
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Metódo:</td>
+  <dd>{{getHeroDescription()}}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{capitalizedName}}</dd>
+
+</dl>
+<!--para sacar expreciones rapidas como el if escribimos a-if y damos tabular-->
+<button  *ngIf="name !== 'Linterna Verde'" (click)="changeHero()" class="btn btn-primary mx-2" > cambiar nombre</button>
+<button *ngIf="age !==20" (click)="changeAge()" class="btn btn-primary mx-2" > cambiar Edad</button>
+<button  (click)="resetForm()" class="btn btn-primary mx-2" > Reset </button>
